@@ -43,13 +43,8 @@ in stdenv.mkDerivation rec {
 		  --prefix PATH : ${ stdenv.lib.makeBinPath path }
 	'';
 
-  buildInputs = [
-    perl
-  ];
-
-  nativeBuildInputs = [
-    makeWrapper
-  ];
+  buildInputs = [ perl ];
+  nativeBuildInputs = [ makeWrapper ];
 
   meta = with stdenv.lib; {
     description = "System information tool";
