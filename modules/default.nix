@@ -1,0 +1,3 @@
+{
+  transocks = import ./transocks.nix;
+}

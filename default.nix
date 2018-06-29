@@ -2,6 +2,7 @@
 
 rec {
   cntr = callPackage ./cntr {};
+
   inxi = callPackage ./inxi {};
 
   conky-symbols = callPackage ./conky-symbols {};
@@ -14,6 +15,8 @@ rec {
 
   xed = callPackage ./xed { inherit mbuild; };
   mbuild = callPackage ./mbuild {};
+
+  modules = import ./modules;
 
   #inherit (callPackages ./node-packages {})
   #  typescript-language-server; # write-good
