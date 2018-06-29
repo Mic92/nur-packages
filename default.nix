@@ -10,6 +10,9 @@
 
   gdbgui-donation = callPackage ./gdbgui {};
 
+  frida-python = callPackage ./frida-python {};
+
+
   #inherit (callPackages ./node-packages {})
   #  typescript-language-server; # write-good
 }
