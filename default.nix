@@ -1,6 +1,6 @@
 { callPackage, callPackages }:
 
-{
+rec {
   cntr = callPackage ./cntr {};
   inxi = callPackage ./inxi {};
 
@@ -11,6 +11,9 @@
   gdbgui-donation = callPackage ./gdbgui {};
 
   frida-python = callPackage ./frida-python {};
+
+  xed = callPackage ./xed { inherit mbuild; };
+  mbuild = callPackage ./mbuild {};
 
   #inherit (callPackages ./node-packages {})
   #  typescript-language-server; # write-good
