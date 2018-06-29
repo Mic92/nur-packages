@@ -14,6 +14,6 @@ pythonPackages.buildPythonPackage rec {
   meta = with stdenv.lib; {
     description = "python-based build system used for building XED";
     homepage = https://github.com/intelxed/mbuild;
-    license = lib.licenses.apsl20;
+    license = licenses.apsl20;
   };
 }

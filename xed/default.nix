@@ -23,6 +23,6 @@ stdenv.mkDerivation {
   meta = with stdenv.lib; {
     description = "x86 encoder decoder";
     homepage = https://github.com/intelxed/xed;
-    license = lib.licenses.apsl20;
+    license = licenses.apsl20;
   };
 }
