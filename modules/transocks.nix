@@ -1,7 +1,5 @@
 { config, lib, pkgs, ... }:
 
-with lib;
-
 let
   cfg = config.services.transocks;
 
@@ -46,7 +44,7 @@ in {
       wantedBy = [ "multi-user.target" ];
       after = [ "network.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.transocks}/bin/transocks -f ${configFile}";
+        ExecStart = "${pkgs.nur.repo.mic92.transocks}/bin/transocks -f ${configFile}";
         DynamicUser = true;
         Restart = "on-failure";
         ProtectSystem = "strict";

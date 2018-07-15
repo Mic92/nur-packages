@@ -1,3 +1,4 @@
 {
-  transocks = import ./transocks.nix;
+  ## not working yet
+  #transocks = import ./transocks.nix;
 }

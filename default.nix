@@ -1,20 +1,22 @@
-{ callPackage, callPackages }:
+{ pkgs ? import <nixpkgs> {} }:
 
 rec {
-  cntr = callPackage ./cntr {};
+  cntr = pkgs.callPackage ./cntr {};
 
-  inxi = callPackage ./inxi {};
+  inxi = pkgs.callPackage ./inxi {};
 
-  conky-symbols = callPackage ./conky-symbols {};
+  conky-symbols = pkgs.callPackage ./conky-symbols {};
 
-  inconsolata-nerdfonts = callPackage ./inconsolata-nerdfonts {};
+  inconsolata-nerdfonts = pkgs.callPackage ./inconsolata-nerdfonts {};
 
-  gdbgui-donation = callPackage ./gdbgui {};
+  gdbgui-donation = pkgs.callPackage ./gdbgui {};
 
-  frida-python = callPackage ./frida-python {};
+  frida-python = pkgs.callPackage ./frida-python {};
 
-  xed = callPackage ./xed { inherit mbuild; };
-  mbuild = callPackage ./mbuild {};
+  eapol_test = pkgs.callPackage ./eapol_test {};
+
+  xed = pkgs.callPackage ./xed { inherit mbuild; };
+  mbuild = pkgs.callPackage ./mbuild {};
 
   modules = import ./modules;
 
