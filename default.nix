@@ -15,8 +15,7 @@ rec {
 
   eapol_test = pkgs.callPackage ./pkgs/eapol_test {};
 
-  xed = pkgs.callPackage ./pkgs/xed { inherit mbuild; };
-  mbuild = pkgs.callPackage ./pkgs/mbuild {};
+  sourcetrail = pkgs.callPackage ./pkgs/sourcetrail {};
 
   modules = import ./modules;
 
