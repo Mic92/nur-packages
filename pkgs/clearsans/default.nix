@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   meta = with stdenv.lib; {
     description = "A versatile OpenType font for screen, print and Web";
-    license = license.asl20;
     homepage = "https://01.org/clear-sans";
+    license = licenses.asl20;
   };
 }
