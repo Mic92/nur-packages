@@ -7,6 +7,8 @@ rec {
 
   conky-symbols = pkgs.callPackage ./pkgs/conky-symbols {};
 
+  clearsans = pkgs.callPackage ./pkgs/clearsans {};
+
   inconsolata-nerdfonts = pkgs.callPackage ./pkgs/inconsolata-nerdfonts {};
 
   gdbgui-donation = pkgs.callPackage ./pkgs/gdbgui {};
