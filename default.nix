@@ -19,6 +19,10 @@ rec {
 
   sourcetrail = pkgs.callPackage ./pkgs/sourcetrail {};
 
+  perlPackages = {
+    Pry = pkgs.callPackage ./pkgs/pry {};
+  };
+
   modules = import ./modules;
 
   #inherit (callPackages ./node-packages {})
