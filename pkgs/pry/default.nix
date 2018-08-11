@@ -27,7 +27,10 @@ let
       url = "mirror://cpan/authors/id/D/DO/DOY/${name}.tar.gz";
       sha256 = "1wkrmc1ksy4zdribj305mmwmsvc2x9283979qh8awm3slx2jmnja";
     }; 
-    propagatedBuildInputs = [ ConfigINIReaderOrdered DevelLexAlias EvalClosure FileHomeDir ModuleRuntime PackageStash PadWalker TryTiny ];
+    propagatedBuildInputs = [
+      ConfigINIReaderOrdered DevelLexAlias EvalClosure
+      FileHomeDir ModuleRuntime PackageStash PadWalker TryTiny TermReadLineGnu
+    ];
   };
 in buildPerlPackage rec {
   name = "Pry-0.003001";
@@ -35,5 +38,7 @@ in buildPerlPackage rec {
     url = "mirror://cpan/authors/id/T/TO/TOBYINK/${name}.tar.gz";
     sha256 = "1hqh7b5846avg2sar0im3mxxibi1nn8fr0rs0fps3asjjfaxby5q";
   }; 
-  propagatedBuildInputs = [ DevelStackTrace ExporterTiny PadWalker Reply ];
+  propagatedBuildInputs = [ 
+    DevelStackTrace ExporterTiny PadWalker Reply BKeywords
+  ];
 }
