@@ -19,6 +19,8 @@ rec {
 
   sourcetrail = pkgs.callPackage ./pkgs/sourcetrail {};
 
+  nix-review-unstable = pkgs.callPackage ./pkgs/nix-review {};
+
   perlPackages = {
     Pry = pkgs.callPackage ./pkgs/pry {};
   };
