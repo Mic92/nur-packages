@@ -41,4 +41,9 @@ in buildPerlPackage rec {
   propagatedBuildInputs = [ 
     DevelStackTrace ExporterTiny PadWalker Reply BKeywords
   ];
+  meta = with stdenv.lib; {
+    description = "Intrude on your code";
+    homepage = https://metacpan.org/pod/Pry;
+    license = licenses.artistic1;
+  };
 }
