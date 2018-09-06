@@ -36,7 +36,7 @@ rec {
 
   sourcetrail = pkgs.callPackage ./pkgs/sourcetrail {};
 
-  smashing = pkgs.callPackage ./pkgs/smashing {};
+  # smashing = pkgs.callPackage ./pkgs/smashing {};
 
   perlPackages = {
     Pry = pkgs.callPackage ./pkgs/pry {};
