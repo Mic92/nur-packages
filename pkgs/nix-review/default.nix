@@ -1,4 +1,4 @@
-{ nix-review, fetchFromGitHub }:
+{ nix-review, lib, fetchFromGitHub }:
 
 let 
   version  = "0.5.0-beta2";
