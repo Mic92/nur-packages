@@ -28,6 +28,8 @@ rec {
 
   nix-review-unstable = pkgs.callPackage ./pkgs/nix-review {};
 
+  oni = pkgs.callPackage ./pkgs/oni {};
+
   rust-nightly = pkgs.callPackage ./pkgs/rust-nightly {};
 
   rustNightlyPlatform = pkgs.recurseIntoAttrs (pkgs.makeRustPlatform rust-nightly);
