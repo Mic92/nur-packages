@@ -1,4 +1,4 @@
-{ python3, fetchFromGitHub }:
+{ stdenv, python3, fetchFromGitHub }:
 
 with python3.pkgs;
 
