@@ -24,6 +24,6 @@ buildPythonApplication rec {
   meta = with stdenv.lib; {
     description = "DNS-Over-HTTPS proxy";
     homepage = "https://github.com/facebookexperimental/doh-proxy";
-    license = licenses.bsd;
+    license = licenses.bsd3;
   };
 }
