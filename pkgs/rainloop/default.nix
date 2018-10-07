@@ -20,6 +20,6 @@ stdenv.mkDerivation rec {
   meta = with stdenv.lib; {
     description = "Simple, modern & fast web-based email client";
     homepage = https://github.com/RainLoop/rainloop-webmail;
-    license = licenses.agpl;
+    license = licenses.agpl3;
   };
 }
