@@ -1,12 +1,6 @@
 { callPackage }:
 
 rec {
-  aioh2 = callPackage ./aioh2.nix {
-    inherit priority;
-  };
-
-  aiohttp-remotes = callPackage ./aiohttp-remotes.nix {};
-
   jupyterthemes = callPackage ./jupyterthemes.nix {
     inherit lesscpy;
   };
