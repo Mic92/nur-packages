@@ -5,5 +5,5 @@ workflow "New workflow" {
 
 action "docker://lnl7/nix:2018-09-21" {
   uses = "docker://lnl7/nix:2018-09-21"
-  args = "nix-env -qaP '*'"
+  args = "ls -la && nix-env -qaP '*'"
 }
