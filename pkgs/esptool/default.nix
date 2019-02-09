@@ -22,6 +22,6 @@ buildPythonPackage rec {
   meta = with stdenv.lib; {
     description = "ESP8266 and ESP32 serial bootloader utility";
     homepage = https://github.com/espressif/esptool;
-    license = licenses.gpl;
+    license = licenses.gpl2;
   };
 }
