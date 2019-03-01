@@ -1,9 +1,9 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["docker://lnl7/nix"]
+  resolves = ["eval nix expressions"]
 }
 
-action "docker://lnl7/nix" {
-  uses = "docker://lnl7/nix"
+action "eval nix expressions" {
+  uses = "docker://nixpkgs/nix-unstable"
   args = "nix-env -f default.nix -qaP *"
 }
