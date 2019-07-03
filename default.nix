@@ -50,8 +50,6 @@ rec {
 
   rustNightlyPlatform = pkgs.recurseIntoAttrs (pkgs.makeRustPlatform rust-nightly);
 
-  sourcetrail = pkgs.callPackage ./pkgs/sourcetrail {};
-
   source-code-pro-nerdfonts = pkgs.callPackage ./pkgs/source-code-pro-nerdfonts {};
 
   threema-web = pkgs.callPackage ./pkgs/threema-web {};
