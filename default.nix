@@ -44,6 +44,8 @@ rec {
 
   nix-review-unstable = pkgs.callPackage ./pkgs/nix-review {};
 
+  nixos-shell = pkgs.callPackage ./pkgs/nixos-shell {};
+
   oni = pkgs.callPackage ./pkgs/oni {};
 
   rust-nightly = pkgs.callPackage ./pkgs/rust-nightly {};
