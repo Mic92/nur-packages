@@ -3,7 +3,7 @@
 rec {
   adminer = pkgs.callPackage ./pkgs/adminer {};
 
-  brotab = pkgs.callPackage ./pkgs/brotab { };
+  brotab = pkgs.callPackage ./pkgs/brotab {};
 
   # TODO checksum can break ... make a mirror?
   # binary-ninja = pkgs.callPackage ./pkgs/binary-ninja {};
@@ -69,14 +69,14 @@ rec {
   };
 
   python2Packages = pkgs.recurseIntoAttrs (
-    pkgs.python2Packages.callPackage ./pkgs/python-pkgs { }
+    pkgs.python2Packages.callPackage ./pkgs/python-pkgs {}
   );
   python3Packages = pkgs.recurseIntoAttrs (
-    pkgs.python3Packages.callPackage ./pkgs/python-pkgs { }
+    pkgs.python3Packages.callPackage ./pkgs/python-pkgs {}
   );
 
 
-  yubikey-touch-detector = pkgs.callPackages ./pkgs/yubikey-touch-detector { };
+  yubikey-touch-detector = pkgs.callPackages ./pkgs/yubikey-touch-detector {};
 
   modules = import ./modules;
 
