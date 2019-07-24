@@ -42,6 +42,8 @@ rec {
     inherit rustNightlyPlatform;
   };
 
+  nixpkgs-fmt = pkgs.callPackage ./pkgs/nixpkgs-fmt {};
+
   nix-review-unstable = pkgs.callPackage ./pkgs/nix-review {};
 
   nixos-shell = pkgs.callPackage ./pkgs/nixos-shell {};
