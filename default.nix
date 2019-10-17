@@ -38,6 +38,8 @@ rec {
     inherit (python3Packages) Mastodon;
   };
 
+  mosh-truecolor = pkgs.callPackage ./pkgs/mosh-truecolor {};
+
   nix-lsp = pkgs.callPackage ./pkgs/nix-lsp {
     inherit rustNightlyPlatform;
   };
