@@ -8,4 +8,4 @@ mosh.overrideAttrs (old: {
     sha256 = "0w7jxdsyxgnf5h09rm8mfgm5z1qc1sqwvgzvrwzb04yshxpsg0zd";
   };
   patches = [ ./ssh_path.patch ];
-}))
+})
