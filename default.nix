@@ -62,9 +62,6 @@ rec {
     Pry = pkgs.callPackage ./pkgs/pry {};
   };
 
-  python2Packages = pkgs.recurseIntoAttrs (
-    pkgs.python2Packages.callPackage ./pkgs/python-pkgs {}
-  );
   python3Packages = pkgs.recurseIntoAttrs (
     pkgs.python3Packages.callPackage ./pkgs/python-pkgs {}
   );
