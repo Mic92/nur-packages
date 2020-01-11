@@ -1,6 +1,8 @@
 { callPackage }:
 
 rec {
+  blurhash = callPackage ./blurhash.nix {};
+
   jupyterthemes = callPackage ./jupyterthemes.nix {
     inherit lesscpy;
   };
