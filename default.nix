@@ -3,6 +3,8 @@
 rec {
   adminer = pkgs.callPackage ./pkgs/adminer {};
 
+  bitwarden_rs_ldap = pkgs.callPackage ./pkgs/bitwarden_rs_ldap {};
+
   brotab = pkgs.callPackage ./pkgs/brotab {};
 
   # TODO checksum can break ... make a mirror?
