@@ -1,5 +1,9 @@
-{ stdenv, buildPythonPackage, fetchurl
-, pip, isPy36 }:
+{ stdenv
+, buildPythonPackage
+, fetchurl
+, pip
+, isPy36
+}:
 
 buildPythonPackage rec {
   pname = "frida";
@@ -20,8 +24,8 @@ buildPythonPackage rec {
   format = "other";
 
   installPhase = ''
-      cp $src frida-${version}-cp36-cp36m-linux_x86_64.whl
-      pip install --prefix=$out frida-${version}-cp36-cp36m-linux_x86_64.whl
+    cp $src frida-${version}-cp36-cp36m-linux_x86_64.whl
+    pip install --prefix=$out frida-${version}-cp36-cp36m-linux_x86_64.whl
   '';
 
   meta = with stdenv.lib; {

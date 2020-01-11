@@ -1,5 +1,10 @@
-{ stdenv, buildPythonPackage, fetchPypi
-, pyserial, pyaes, ecdsa }:
+{ stdenv
+, buildPythonPackage
+, fetchPypi
+, pyserial
+, pyaes
+, ecdsa
+}:
 
 buildPythonPackage rec {
   pname = "esptool";
