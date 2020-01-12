@@ -62,8 +62,6 @@ rec {
     pkgs.python3Packages.callPackage ./pkgs/python-pkgs {}
   );
 
-  pwndbg = pkgs.callPackage ./pkgs/pwndbg-unstable {};
-
   yubikey-touch-detector = pkgs.callPackages ./pkgs/yubikey-touch-detector {};
 
   modules = import ./modules;
