@@ -20,7 +20,9 @@ rec {
 
   ferdi = pkgs.callPackage ./pkgs/ferdi {};
 
-  fira-code-nerdfonts = pkgs.callPackage ./pkgs/fira-code-nerdfonts {};
+  fira-code-pro-nerdfonts = pkgs.nerdfonts.override {
+    fonts = [ "FiraCode" ];
+  };
 
   frida-tools = pkgs.callPackage ./pkgs/frida-tools { myPython3Packages = python3Packages; };
 
@@ -33,8 +35,6 @@ rec {
   healthcheck = pkgs.callPackage ./pkgs/healthcheck {};
 
   hello-nur = pkgs.callPackage ./pkgs/hello-nur {};
-
-  inconsolata-nerdfonts = pkgs.callPackage ./pkgs/inconsolata-nerdfonts {};
 
   lualdap = pkgs.callPackage ./pkgs/lualdap {};
 
@@ -54,7 +54,9 @@ rec {
 
   sgx-lkl = pkgs.callPackage ./pkgs/sgx-lkl {};
 
-  source-code-pro-nerdfonts = pkgs.callPackage ./pkgs/source-code-pro-nerdfonts {};
+  source-code-pro-nerdfonts = pkgs.nerdfonts.override {
+    fonts = [ "SourceCodePro" ];
+  };
 
   threema-web = pkgs.callPackage ./pkgs/threema-web {};
 
