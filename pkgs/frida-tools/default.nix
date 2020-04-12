@@ -22,7 +22,7 @@ buildPythonApplication rec {
 
   meta = with stdenv.lib; {
     description = "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers";
-    homepage = https://www.frida.re/;
+    homepage = "https://www.frida.re/";
     license = licenses.wxWindows;
   };
 }
