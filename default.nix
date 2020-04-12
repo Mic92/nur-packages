@@ -36,6 +36,8 @@ rec {
 
   hello-nur = pkgs.callPackage ./pkgs/hello-nur {};
 
+  keystone = pkgs.callPackage ./pkgs/keystone {};
+
   lualdap = pkgs.callPackage ./pkgs/lualdap {};
 
   mastodon-hnbot = pkgs.python3Packages.callPackage ./pkgs/mastodon-hnbot {
@@ -75,7 +77,9 @@ rec {
   phpldapadmin = pkgs.callPackage ./pkgs/phpldapadmin {};
 
   python3Packages = pkgs.recurseIntoAttrs (
-    pkgs.python3Packages.callPackage ./pkgs/python-pkgs {}
+    (pkgs.python3Packages.callPackage ./pkgs/python-pkgs {
+      inherit keystone;
+    })
   );
 
   yubikey-touch-detector = pkgs.callPackage ./pkgs/yubikey-touch-detector {};
