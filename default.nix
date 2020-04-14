@@ -26,8 +26,6 @@ rec {
 
   gatttool = pkgs.callPackage ./pkgs/gatttool {};
 
-  gdbgui-donation = pkgs.callPackage ./pkgs/gdbgui {};
-
   gdb-dashboard = pkgs.callPackage ./pkgs/gdb-dashboard {};
 
   healthcheck = pkgs.callPackage ./pkgs/healthcheck {};
