@@ -13,3 +13,4 @@ jobs:
         name: mic92
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
         file: non-broken.nix
+        nixBuildArgs: "-k"
