@@ -8,6 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: cachix/install-nix-action@v8
+    - run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
     - uses: cachix/cachix-action@v5
       with:
         name: mic92
