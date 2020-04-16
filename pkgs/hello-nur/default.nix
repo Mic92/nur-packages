@@ -11,6 +11,7 @@ stdenv.mkDerivation rec {
 
   postPatch = ''
     sed -i -e 's/Hello, world!/Hello, NUR!/' src/hello.c
+    echo hohoho
   '';
 
   # fails due to patch
