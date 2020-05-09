@@ -33,7 +33,7 @@ rec {
 
   remote-pdb = callPackage ./remote-pdb.nix { };
 
-  web2ldap = callPackage ./pkgs/web2ldap {
+  web2ldap = callPackage ./web2ldap {
     inherit ldap0;
   };
 }
