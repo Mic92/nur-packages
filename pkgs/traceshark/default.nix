@@ -1,5 +1,5 @@
 { lib, mkDerivation, fetchFromGitHub, qmake }:
-mkDerivation {
+mkDerivation rec {
   name = "traceshark-unstable-2020-05-15";
 
   src = fetchFromGitHub {
