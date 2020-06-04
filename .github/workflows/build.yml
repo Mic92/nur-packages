@@ -12,7 +12,8 @@ jobs:
         nurRepo:
           - mic92
         cachixName:
-          - mic92
+          -
+        #  - mic92
         nixPath:
           - nixpkgs=channel:nixos-unstable
           - nixpkgs=https://github.com/Mic92/nixpkgs/archive/master.tar.gz
@@ -28,6 +29,7 @@ jobs:
       run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
     - name: Setup cachix
       uses: cachix/cachix-action@v6
+      if: ${{ matrix.cachixName != '' }}
       with:
         name: ${{ matrix.cachixName }}
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
