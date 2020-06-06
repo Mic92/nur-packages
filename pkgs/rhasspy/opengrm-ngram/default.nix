@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   pname = "opengrm-ngram";
-  version = "1.3.9";
+  version = "1.3.10";
 
   src = fetchurl {
     url = "http://www.openfst.org/twiki/pub/GRM/NGramDownload/ngram-${version}.tar.gz";
-    sha256 = "1rhpqpfppp16r0lgbmcjxwkwz42hzyzh3f6dmc0w2w017bg1s64w";
+    sha256 = "1409f2mfy7sywqqqld6lm1hn3vs2p1ida5wirvmnhsbrjg10qhq5";
   };
 
   enableParallelBuilding = true;
