@@ -30,6 +30,7 @@
 , kaldi
 , openfst
 , opengrm-ngram
+, phonetisaurus
 }:
 
 buildPythonPackage rec {
@@ -87,6 +88,7 @@ buildPythonPackage rec {
         kaldi
         openfst
         opengrm-ngram
+        phonetisaurus
       ]}" \
       --set PYTHONPATH "$PYTHONPATH"
      ln -s -t $out/share/rhasspy ${rhasspy-server-hermes}/share/rhasspy/{web,templates}

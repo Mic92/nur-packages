@@ -108,7 +108,10 @@
   };
 
   rhasspy = callPackage ./rhasspy {
-    inherit rhasspy-asr-kaldi-hermes
+    inherit kaldi
+      opengrm-ngram
+      phonetisaurus
+      rhasspy-asr-kaldi-hermes
       rhasspy-dialogue-hermes
       rhasspy-tts-cli-hermes
       rhasspy-wake-porcupine-hermes
@@ -122,12 +125,12 @@
       rhasspy-homeassistant-hermes
       rhasspy-supervisor
       rhasspy-server-hermes
-      kaldi
-      opengrm-ngram
     ;
   };
 
   swagger-ui-py = callPackage ./swagger-ui-py {};
+
+  phonetisaurus = callPackage ./phonetisaurus {};
 
   typing-inspect = callPackage ./typing-inspect {};
 }
