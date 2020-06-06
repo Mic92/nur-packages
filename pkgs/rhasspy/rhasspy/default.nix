@@ -84,6 +84,9 @@ buildPythonPackage rec {
       ]}" \
       --set PYTHONPATH "$PYTHONPATH"
      ln -s -t $out/share/rhasspy ${rhasspy-server-hermes}/share/rhasspy/{web,templates}
+     mkdir -p $out/lib/kaldi
+     ln -s ${kaldi}/bin/* $out/lib/kaldi
+     ln -s ${kaldi}/share/kali/egs $out/lib/kaldi
   '';
 
   buildInputs = [

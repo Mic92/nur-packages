@@ -57,9 +57,6 @@ in stdenv.mkDerivation {
     chmod +x bin/git
     cat src/.version
     export PATH=$(pwd)/bin:$PATH
-
-    mkdir -p $out/share/kaldi
-    cp -r egs $out/share/kaldi
   '';
 
   buildInputs = [
@@ -74,13 +71,9 @@ in stdenv.mkDerivation {
   ];
 
   postInstall = ''
+    mkdir -p $out/share/kaldi
+    cp -r ../egs $out/share/kaldi
   '';
-  #  mkdir -p "${dist_dir}/kaldi/egs" && \
-  #  cp -R "${kaldi_build}/egs/wsj" "${dist_dir}/kaldi/egs/" && \
-  #  rsync -av --exclude='*.o' --exclude='*.cc' "${kaldi_build}/src/bin/" "${dist_dir}/kaldi/" && \
-  #  cp "${kaldi_build}/src/lib"/*.so* "${dist_dir}/kaldi/" && \
-  #  rsync -av --include='*.so*' --include='fst' --exclude='*' "${kaldi_build}/tools/openfst/lib/" "${dist_dir}/kaldi/" && \
-  #  cp "${kaldi_build}/tools/openfst/bin/" "${dist_dir}/kaldi/"
 
   meta = with stdenv.lib; {
     description = "Speech Recognition Toolkit";
