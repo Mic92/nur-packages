@@ -82,6 +82,7 @@ buildPythonPackage rec {
         rhasspy-rasa-nlu-hermes
         rhasspy-homeassistant-hermes
         rhasspy-server-hermes
+        rhasspy-nlu-hermes
         mosquitto
         kaldi
         openfst
