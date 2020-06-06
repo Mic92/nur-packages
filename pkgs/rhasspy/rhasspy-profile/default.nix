@@ -1,6 +1,6 @@
 { lib
 , buildPythonPackage
-, fetchPypi
+, fetchFromGitHub
 , pythonOlder
 , pydash
 , aiofiles
@@ -14,9 +14,11 @@ buildPythonPackage rec {
 
   disabled = pythonOlder "3.6";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "d22313dcd3e024cc90a6ec32fe486d769d773092e6c071e4358df66e177aee17";
+  src = fetchFromGitHub {
+    owner = "rhasspy";
+    repo = "rhasspy-profile";
+    rev = "b7f939818fb72dd4a9acb7cc074c95daa48b1aa3";
+    sha256 = "016fy67w0q1c2nwzbb6i0hyfhkmn88z8wg9zf8mwaywwjkm4dm6q";
   };
 
   postPatch = ''
