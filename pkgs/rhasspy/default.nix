@@ -85,6 +85,8 @@
 
   pydash = callPackage ./pydash {};
 
+  opengrm-ngram = callPackage ./opengrm-ngram {};
+
   json5 = callPackage ./json5 {};
 
   rhasspy-profile = callPackage ./rhasspy-profile {
@@ -121,6 +123,7 @@
       rhasspy-supervisor
       rhasspy-server-hermes
       kaldi
+      opengrm-ngram
     ;
   };
 

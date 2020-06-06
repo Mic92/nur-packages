@@ -28,6 +28,8 @@
 , supervisor
 , mosquitto
 , kaldi
+, openfst
+, opengrm-ngram
 }:
 
 buildPythonPackage rec {
@@ -81,12 +83,15 @@ buildPythonPackage rec {
         rhasspy-homeassistant-hermes
         rhasspy-server-hermes
         mosquitto
+        kaldi
+        openfst
+        opengrm-ngram
       ]}" \
       --set PYTHONPATH "$PYTHONPATH"
      ln -s -t $out/share/rhasspy ${rhasspy-server-hermes}/share/rhasspy/{web,templates}
      mkdir -p $out/lib/kaldi
      ln -s ${kaldi}/bin/* $out/lib/kaldi
-     ln -s ${kaldi}/share/kali/egs $out/lib/kaldi
+     ln -s ${kaldi}/share/kaldi/egs $out/lib/kaldi
   '';
 
   buildInputs = [
