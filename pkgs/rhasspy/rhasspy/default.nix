@@ -15,6 +15,7 @@
 , rhasspy-dialogue-hermes
 , rhasspy-tts-cli-hermes
 , rhasspy-wake-porcupine-hermes
+, rhasspy-wake-snowboy-hermes
 , rhasspy-remote-http-hermes
 , rhasspy-fuzzywuzzy-hermes
 , rhasspy-speakers-cli-hermes
@@ -83,6 +84,7 @@ buildPythonPackage rec {
         rhasspy-asr-kaldi-hermes
         rhasspy-tts-cli-hermes
         rhasspy-wake-porcupine-hermes
+        rhasspy-wake-snowboy-hermes
         rhasspy-remote-http-hermes
         rhasspy-fuzzywuzzy-hermes
         rhasspy-speakers-cli-hermes
