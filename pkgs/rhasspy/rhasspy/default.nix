@@ -40,6 +40,7 @@
 , gnused
 , alsaUtils
 , curl
+, gzip
 }:
 
 buildPythonPackage rec {
@@ -107,6 +108,7 @@ buildPythonPackage rec {
         gnused
         alsaUtils
         curl
+        gzip
       ]}" \
       --set PYTHONPATH "$PYTHONPATH"
      ln -s -t $out/share/rhasspy ${rhasspy-server-hermes}/share/rhasspy/{web,templates}
