@@ -1,5 +1,5 @@
 { stdenv, buildPythonPackage, fetchFromGitHub
-, paho-mqtt, rhasspy-hermes }:
+, paho-mqtt, rhasspy-hermes, snowboy }:
 
 buildPythonPackage rec {
   pname = "rhasspy-wake-snowboy-hermes";
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   };
 
   propagatedBuildInputs = [
-    rhasspy-hermes
+    rhasspy-hermes snowboy
   ];
 
   meta = with stdenv.lib; {
