@@ -5,7 +5,7 @@
 , python-jsonrpc-server
 }:
 
-buildPythonApplication {
+buildPythonApplication rec {
   pname = "mypyls";
   version = "2020-06-25";
 
