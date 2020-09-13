@@ -42,6 +42,8 @@ rec {
 
   kvmtool = pkgs.callPackage ./pkgs/kvmtool { };
 
+  linux_ayufan_4_4 = pkgs.callPackage ./pkgs/linux_ayufan_4_4 { };
+
   lualdap = pkgs.callPackage ./pkgs/lualdap { };
 
   mastodon-hnbot = pkgs.python3Packages.callPackage ./pkgs/mastodon-hnbot {
