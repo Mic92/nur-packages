@@ -40,7 +40,7 @@ stdenv.mkDerivation {
   ];
 
   runtimeDependencies = [
-    systemd.lib
+    (lib.getLib systemd)
     libnotify
     pulseaudio
   ];
