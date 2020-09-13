@@ -51,6 +51,8 @@ let
 
     inherit configfile;
 
+    extraMeta.platforms = [ "aarch64-linux" ];
+
     allowImportFromDerivation = true; # Let nix check the assertions about the config
   } // lib.optionalAttrs (randstructSeed != null) { inherit randstructSeed; });
 
