@@ -35,7 +35,7 @@ in
       && !(
            (builtins.hasAttr "meta" p)
            && (builtins.hasAttr "available" p.meta)
-           && (p.meta.available)
+           && (!p.meta.available)
       )
     )
     (import ./default.nix { inherit pkgs; })
