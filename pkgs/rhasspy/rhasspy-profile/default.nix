@@ -10,18 +10,19 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-profile";
-  version = "0.1.4";
+  version = "0.5.3";
 
   disabled = pythonOlder "3.6";
 
   src = fetchFromGitHub {
     owner = "rhasspy";
     repo = "rhasspy-profile";
-    rev = "b7f939818fb72dd4a9acb7cc074c95daa48b1aa3";
-    sha256 = "016fy67w0q1c2nwzbb6i0hyfhkmn88z8wg9zf8mwaywwjkm4dm6q";
+    rev = "v${version}";
+    sha256 = "1vqr51kiqh4wkgvkkr86qy0dclgfxqzxpxmfyg15lh4fcppwq1rg";
   };
 
   postPatch = ''
+    patchShebangs ./configure
     sed -i "s/aiofiles==.*/aiofiles/" requirements.txt
     sed -i "s/json5==.*/json5/" requirements.txt
   '';
