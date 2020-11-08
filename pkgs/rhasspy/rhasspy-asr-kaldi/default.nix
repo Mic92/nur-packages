@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-asr-kaldi";
-  version = "0.5.0";
+  version = "0.3.0";
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-aXUrVD5FF7kwAg6JYXgYv1ntDuC3gfKjGPxJj44BiIs=";
+    sha256 = "sha256-XJtYITFev8CU5CLx0tpVWETzc+Ti4+Eik2j2ICWbrQE=";
   };
 
   propagatedBuildInputs = [
