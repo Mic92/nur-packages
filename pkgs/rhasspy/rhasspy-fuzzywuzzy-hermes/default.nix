@@ -25,12 +25,7 @@ buildPythonPackage rec {
     rhasspy-nlu
   ];
 
-  patches = [
-    (fetchpatch {
-      url = "https://github.com/rhasspy/rhasspy-fuzzywuzzy-hermes/commit/fa20be4a3ebd17718de3b5b883335dc4613801d1.patch";
-      sha256 = "1dcmd0icn7880dhxhlw4swhp99nnk9y9fzcyycpan6r4dk2xb4nl";
-    })
-  ];
+  doCheck = false;
 
   meta = with lib; {
     description = "MQTT service for intent recognition with fuzzywuzzy using the Hermes protocol";
