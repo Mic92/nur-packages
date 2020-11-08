@@ -3,18 +3,22 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-wake-porcupine-hermes";
-  version = "2020-06-05";
+  version = "0.2.0";
 
   src = fetchFromGitHub {
     owner = "rhasspy";
     repo = pname;
-    rev = "ef7ae6e830f16adb741e913e7efdcb668683d904";
-    sha256 = "05ngsdqhqnsj463p3zazxgsqf2v2chqwa678hm4j2j9135rg817s";
+    rev = "v${version}";
+    sha256 = "027l7lwixb8jw67249p1rzh6v825kksinpnwyvl34cnky0vqmq8v";
   };
 
   propagatedBuildInputs = [
     rhasspy-hermes attrs
   ];
+
+  postPatch = ''
+    patchShebangs configure
+  '';
 
   meta = with stdenv.lib; {
     description = "Hotword detection for Rhasspy using Porcupine";
