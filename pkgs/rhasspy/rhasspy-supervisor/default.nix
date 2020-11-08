@@ -7,13 +7,13 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-supervisor";
-  version = "0.4.2";
+  version = "0.3.1";
 
   src = fetchFromGitHub {
     owner = "rhasspy";
     repo = "rhasspy-supervisor";
     rev = "v${version}";
-    sha256 = "sha256-CVyR/eFMbj2Liw10ui6+qCKJfmV6rxXsXhycspEKx6o=";
+    sha256 = "sha256-zTh6PnfRDoKoCheksq2FcbuoxPWM/HcWHjwskB0WCh8=";
   };
 
   propagatedBuildInputs = [
