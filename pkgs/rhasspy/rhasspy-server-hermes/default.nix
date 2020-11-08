@@ -14,7 +14,7 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-server-hermes";
-  version = "2.5.0";
+  version = "2.5.5";
 
   disabled = pythonOlder "3.7";
 
@@ -22,7 +22,7 @@ buildPythonPackage rec {
     owner = "rhasspy";
     repo = pname;
     rev = "a731c2602f87f3ebdc843edcc51d457fde3d4b59";
-    sha256 = "09rz75jyzsxgphry2z1vbsq46dzlyccij90d20bvrrjkmfvcmwz2";
+    sha256 = "sha256-4vPKtqtT5rwXEA0kGRnz9DdDsF47fOEzvK/r72U5Pyc=";
   };
 
   postPatch = ''
