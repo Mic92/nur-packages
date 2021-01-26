@@ -3,6 +3,7 @@
 , fetchFromGitHub
 , networkx
 , kaldi
+, openfst
 , rhasspy-asr
 , rhasspy-nlu
 , pythonOlder
@@ -28,15 +29,34 @@ buildPythonPackage rec {
     rhasspy-nlu
   ];
 
-  buildInputs = [ kaldi ];
+  buildInputs = [ kaldi openfst ];
+
+  patches = [ ./kaldi-bin.patch ];
 
   postPatch = ''
     patchShebangs ./configure
     sed -i "s/networkx==.*/networkx/" requirements.txt
   '';
 
+  NIX_CFLAGS_COMPILE = [
+    "-I${kaldi}/include/kaldi"
+    "-I${kaldi}/include/openfst"
+  ];
   postBuild = ''
-    $CC -o $out/bin/online2-cli-nnet3-decode-faster-confidence etc/online2-cli-nnet3-decode-faster-confidence
+    mkdir -p $out/bin
+    $CXX -o $out/bin/online2-cli-nnet3-decode-faster-confidence \
+      etc/online2-cli-nnet3-decode-faster-confidence.cc \
+      -lfst \
+      -lkaldi-online2 \
+      -lkaldi-nnet3 \
+      -lkaldi-cudamatrix \
+      -lkaldi-decoder \
+      -lkaldi-lat \
+      -lkaldi-hmm \
+      -lkaldi-fstext \
+      -lkaldi-util \
+      -lkaldi-matrix \
+      -lkaldi-base
   '';
 
   # misses files
