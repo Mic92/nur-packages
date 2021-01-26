@@ -140,5 +140,6 @@
 
   swagger-ui-py = callPackage ./swagger-ui-py { };
 
+  pvporcupine = callPackage ./pvporcupine { };
   typing-inspect = callPackage ./typing-inspect { };
 }
