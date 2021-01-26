@@ -7,13 +7,13 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-wake-snowboy-hermes";
-  version = "2020-10-10";
+  version = "2020-12-20";
 
   src = fetchFromGitHub {
     owner = "rhasspy";
     repo = pname;
-    rev = "8c39d6f68c0ccdbcfedfc67f183d217cb2006abc";
-    sha256 = "sha256-7lLYN8f/ZbnC4Qd73/Az0lokLvqqjCi6LdSWdU7Pex4=";
+    rev = "ddc92bc50010c2039d710e26485f641229c07f2f";
+    sha256 = "sha256-2c4vFaj8kLBkZl0v3+N/UfYYEVUNNOaHrCvoiSgY2tE=";
   };
 
   propagatedBuildInputs = [
