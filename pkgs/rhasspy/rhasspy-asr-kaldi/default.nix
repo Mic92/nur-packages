@@ -2,6 +2,7 @@
 , buildPythonPackage
 , fetchFromGitHub
 , networkx
+, kaldi
 , rhasspy-asr
 , rhasspy-nlu
 , pythonOlder
@@ -27,9 +28,15 @@ buildPythonPackage rec {
     rhasspy-nlu
   ];
 
+  buildInputs = [ kaldi ];
+
   postPatch = ''
     patchShebangs ./configure
     sed -i "s/networkx==.*/networkx/" requirements.txt
+  '';
+
+  postBuild = ''
+    $CC -o $out/bin/online2-cli-nnet3-decode-faster-confidence etc/online2-cli-nnet3-decode-faster-confidence
   '';
 
   # misses files
