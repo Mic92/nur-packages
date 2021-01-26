@@ -34,7 +34,7 @@ buildPythonPackage rec {
   installPhase = ''
     set +x
     cp $src ${wheelName}
-    HOME=$TMPDIR/nix/store/l0kr9i5b9f90m78mn59fpa5sazbaggwg-python3.8-deepspeech_tflite-0.10.0-alpha.3.drv pip install --prefix=$out ${wheelName}
+    pip install --prefix=$out ${wheelName}
   '';
 
   meta = with stdenv.lib; {
