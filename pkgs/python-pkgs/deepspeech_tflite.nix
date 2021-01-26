@@ -4,6 +4,7 @@
 , pip
 , isPy38
 , numpy
+, autoPatchelfHook
 }:
 let
   pythonVersion = "38";
@@ -21,7 +22,9 @@ buildPythonPackage rec {
     sha256 = "sha256-Ot30lYusxipgQ9tjYGQCKQXKt47OsQ0S+aDU4b2Yq3Q=";
   };
 
-  nativeBuildInputs = [ pip ];
+  buildInputs = [ stdenv.cc.cc ];
+
+  nativeBuildInputs = [ pip autoPatchelfHook ];
 
   propagatedBuildInputs = [ numpy ];
 
