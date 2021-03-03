@@ -16,6 +16,8 @@ rec {
 
   drone-runner-exec = pkgs.callPackage ./pkgs/drone-runner-exec { };
 
+  drone-runner-ssh = pkgs.callPackage ./pkgs/drone-runner-ssh { };
+
   eapol_test = pkgs.callPackage ./pkgs/eapol_test { };
 
   fira-code-pro-nerdfonts = pkgs.nerdfonts.override {
