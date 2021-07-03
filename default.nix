@@ -120,8 +120,6 @@ rec {
 
   threema-web = pkgs.callPackage ./pkgs/threema-web { };
 
-  queued-build-hook = pkgs.callPackage ./pkgs/queued-build-hook { };
-
   untilport = pkgs.callPackage ./pkgs/untilport { };
 
   yubikey-touch-detector = pkgs.callPackage ./pkgs/yubikey-touch-detector { };
