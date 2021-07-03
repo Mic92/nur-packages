@@ -102,8 +102,6 @@ rec {
 
   inherit (rhasspyPackages) rhasspy;
 
-  sgx-lkl = pkgs.callPackage ./pkgs/sgx-lkl { };
-
   signald = pkgs.callPackage ./pkgs/signald { };
 
   weechat-signal = pkgs.callPackage ./pkgs/weechat-signal { };
