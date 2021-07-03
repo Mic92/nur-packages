@@ -89,8 +89,6 @@ rec {
     Pry = pkgs.callPackage ./pkgs/pry { };
   };
 
-  phpldapadmin = pkgs.callPackage ./pkgs/phpldapadmin { };
-
   python3Packages = pkgs.recurseIntoAttrs (
     pkgs.python3Packages.callPackage ./pkgs/python-pkgs { }
   );
