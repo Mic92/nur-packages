@@ -6,13 +6,13 @@
 
 buildPythonPackage rec {
   pname = "rapidfuzz";
-  version = "0.12.5";
+  version = "1.4.1";
 
   disabled = pythonOlder "3.5";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-dNCasSJLoG/oUXU0U3VAeHpa4CUDhcrXFe7VkulHQVw=";
+    sha256 = "sha256-3iBVAXg3bSG/4bNKfcQqsQe7KC74IGnPbf4oBaACniY=";
   };
 
   meta = with lib; {
