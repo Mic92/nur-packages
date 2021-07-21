@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-nlu";
-  version = "0.4.0";
+  version = "0.3.0";
 
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-DnW4G9w3MDHoSEgm3E+ZZDroMvofBcWJ91fUk4lrSMI=";
+    sha256 = "sha256-Gtw/MPOhpMlElAEpWWCKMSG+MEwVhrxCFcVtr+J4Lno=";
   };
 
   postPatch = ''
