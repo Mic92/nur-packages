@@ -12,7 +12,7 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-profile";
-  version = "0.4.0";
+  version = "0.7.2";
 
   disabled = pythonOlder "3.6";
 
@@ -20,7 +20,7 @@ buildPythonPackage rec {
     owner = "rhasspy";
     repo = "rhasspy-profile";
     rev = "v${version}";
-    sha256 = "sha256-I6ThrOfZHvpkcQSugw+dtVrUX79qqBPkcC/uTiohulY=";
+    sha256 = "sha256-xzu7pRVAyHQm0zI6RnPnHP7CAhi67BPGnnU+PEZyavM=";
   };
 
   postPatch = ''
