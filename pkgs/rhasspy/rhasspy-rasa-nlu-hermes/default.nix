@@ -10,18 +10,19 @@
 
 buildPythonPackage rec {
   pname = "rhasspy-rasa-nlu-hermes";
-  version = "0.3.1";
+  version = "0.4.1";
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-gffZ94wHSghNbEOsvnOc6LquPmm4VXSm5YRuFBJqaug=";
+    sha256 = "sha256-/cC/GcNQZ1nTyCVkigTmqX3gmE3mzVOewLzJKtZT7lI=";
   };
 
   postPatch = ''
     sed -i "s/aiohttp==.*/aiohttp/" requirements.txt
     sed -i 's/paho-mqtt==.*/paho-mqtt/' requirements.txt
+    sed -i 's/rhasspy-nlu.*/rhasspy-nlu/' requirements.txt
   '';
 
   propagatedBuildInputs = [
