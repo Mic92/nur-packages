@@ -4,17 +4,19 @@
 , pythonOlder
 , num2words
 , networkx
+, numpy
+, grapheme
 }:
 
 buildPythonPackage rec {
   pname = "rhasspy-nlu";
-  version = "0.3.3";
+  version = "0.4.0";
 
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-VjS/jnSGzCAfcPAVWsDa7JD5Kl1dbQLtTEnOrlAXdpg=";
+    sha256 = "sha256-DnW4G9w3MDHoSEgm3E+ZZDroMvofBcWJ91fUk4lrSMI=";
   };
 
   postPatch = ''
@@ -25,6 +27,8 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     num2words
     networkx
+    numpy
+    grapheme
   ];
 
   # misses files from the repo

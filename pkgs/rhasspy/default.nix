@@ -3,6 +3,9 @@
     inherit typing-inspect;
   };
 
+  grapheme = callPackage ./grapheme {
+  };
+
   hypercorn = callPackage ./hypercorn { };
 
   quart = callPackage ./quart {
@@ -49,7 +52,9 @@
     inherit rhasspy-hermes;
   };
 
-  rhasspy-nlu = callPackage ./rhasspy-nlu { };
+  rhasspy-nlu = callPackage ./rhasspy-nlu {
+    inherit grapheme;
+  };
 
   rhasspy-remote-http-hermes = callPackage ./rhasspy-remote-http-hermes {
     inherit rhasspy-hermes rhasspy-nlu rhasspy-silence;
