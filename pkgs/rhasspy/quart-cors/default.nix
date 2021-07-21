@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "quart-cors";
-  version = "0.5.0";
+  version = "0.3.0";
 
   disabled = pythonOlder "3.7"; # requires python version >=3.7.0
 
   src = fetchPypi {
     pname = "Quart-CORS";
     inherit version;
-    sha256 = "sha256-6gjSau+RjVkZT78GXN6bbK6Q3F8hEg3NJU19RhkM0pM=";
+    sha256 = "sha256-wIvbMmIZtsGG0Z7WqXp/0C3o/jbHhWr4iUlMabUlxTw=";
   };
 
   propagatedBuildInputs = [
