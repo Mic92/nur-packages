@@ -20,7 +20,6 @@ rec {
     fonts = [ "FiraCode" ];
   };
 
-  frida-tools = pkgs.callPackage ./pkgs/frida-tools { myPython3Packages = python3Packages; };
 
   gatttool = pkgs.callPackage ./pkgs/gatttool { };
 
