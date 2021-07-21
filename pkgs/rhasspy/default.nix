@@ -79,7 +79,7 @@
   };
 
   rhasspy-wake-snowboy-hermes = callPackage ./rhasspy-wake-snowboy-hermes {
-    inherit rhasspy-hermes;
+    inherit rhasspy-hermes snowboy;
   };
 
   rhasspy-dialogue-hermes = callPackage ./rhasspy-dialogue-hermes {
@@ -150,6 +150,8 @@
       rhasspy-server-hermes
       ;
   };
+
+  snowboy = callPackage ./snowboy { };
 
   swagger-ui-py = callPackage ./swagger-ui-py { };
 
