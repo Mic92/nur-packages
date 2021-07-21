@@ -7,11 +7,11 @@
 
 buildPythonPackage rec {
   pname = "pydash";
-  version = "5.0.2";
+  version = "4.7.6";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-fAL1wnUkq72QdDxLYP2MjI6EbuBDlkJwT3ejzyH3w3E=";
+    sha256 = "sha256-p3M4hquBHjZRC0T/HefMyYAyfXAftESkss45Xm9KSoc=";
   };
 
   checkInputs = [
