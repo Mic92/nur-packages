@@ -24,7 +24,6 @@ buildPythonPackage rec {
     sed -i "s/aiohttp==.*/aiohttp/" requirements.txt
     sed -i "s/networkx==.*/networkx/" requirements.txt
     sed -i 's/paho-mqtt==.*/paho-mqtt/' requirements.txt
-    sed -i 's/rhasspy-nlu~=.*/rhasspy-nlu/' requirements.txt
   '';
 
   propagatedBuildInputs = [
