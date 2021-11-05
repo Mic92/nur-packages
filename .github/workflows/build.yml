@@ -42,6 +42,6 @@ jobs:
           -I nixpkgs=$(nix-instantiate --find-file nixpkgs) \
           -I $PWD > /dev/null
     - name: Build nix packages
-      run: nix run -f . nix-build-uncached -c nix-build-uncached non-broken.nix
+      run: nix shell -f . nix-build-uncached -c nix-build-uncached non-broken.nix
     - name: Trigger NUR update
       run: curl -XPOST "https://nur-update.herokuapp.com/update?repo=${{ matrix.nurRepo }}"
