@@ -7,6 +7,7 @@
 , gnused
 , netcat
 , nettools
+, unixtools
 , makeWrapper
 , openssl
 }:
@@ -29,6 +30,7 @@ stdenv.mkDerivation rec {
     wrapProgram $out/bin/ircsink \
       --prefix PATH : ${lib.makeBinPath [
         coreutils
+        unixtools.getopt
         gawk
         gnused
         netcat
