@@ -12,7 +12,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  name = "ircsink";
+  pname = "ircsink";
   version = "1.0.1";
 
   src = fetchgit {
