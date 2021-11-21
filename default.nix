@@ -31,6 +31,7 @@ rec {
   hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
 
   irc-announce = pkgs.callPackage ./pkgs/irc-announce { };
+  ircsink = pkgs.callPackage ./pkgs/ircsink { };
 
   kvmtool = pkgs.callPackage ./pkgs/kvmtool { };
 
