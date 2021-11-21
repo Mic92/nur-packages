@@ -31,6 +31,7 @@ rec {
   hello-nur = pkgs.callPackage ./pkgs/hello-nur { };
 
   irc-announce = pkgs.callPackage ./pkgs/irc-announce { };
+
   ircsink = pkgs.callPackage ./pkgs/ircsink { };
 
   kvmtool = pkgs.callPackage ./pkgs/kvmtool { };
@@ -89,7 +90,7 @@ rec {
   };
 
   python3Packages = pkgs.recurseIntoAttrs (
-    pkgs.python39Packages.callPackage ./pkgs/python-pkgs { }
+    pkgs.python3Packages.callPackage ./pkgs/python-pkgs {}
   );
 
   pyps4-2ndscreen = pkgs.python39.pkgs.toPythonApplication python3Packages.pyps4-2ndscreen;
