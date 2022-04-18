@@ -114,7 +114,7 @@ rec {
     fonts = [ "SourceCodePro" ];
   };
 
-  peerix = pkgs.python3.pkgs.callPackage ./pkgs/peerix { };
+  #peerix = pkgs.python3.pkgs.callPackage ./pkgs/peerix { };
 
   traceshark = pkgs.qt5.callPackage ./pkgs/traceshark { };
 
