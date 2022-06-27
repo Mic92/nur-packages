@@ -72,13 +72,6 @@ rec {
 
   rspamd-learn-spam-ham = pkgs.python39.pkgs.callPackage ./pkgs/rspam-learn-spam-ham { };
 
-  rhasspyPackages = import ./pkgs/rhasspy {
-    inherit (pkgs.python39Packages) callPackage;
-    inherit (python3Packages) deepspeech;
-  };
-
-  inherit (rhasspyPackages) rhasspy;
-
   signald = pkgs.callPackage ./pkgs/signald { };
 
   weechat-signal = pkgs.callPackage ./pkgs/weechat-signal { };
