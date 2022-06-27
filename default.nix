@@ -38,9 +38,7 @@ rec {
 
   lualdap = pkgs.callPackage ./pkgs/lualdap { };
 
-  mastodon-hnbot = pkgs.python39Packages.callPackage ./pkgs/mastodon-hnbot {
-    inherit (python3Packages) Mastodon;
-  };
+  mastodon-hnbot = pkgs.python39Packages.callPackage ./pkgs/mastodon-hnbot {};
 
   mypyls = pkgs.python39.pkgs.callPackage ./pkgs/mypyls { };
 
