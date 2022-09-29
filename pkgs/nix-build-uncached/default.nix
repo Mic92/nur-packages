@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, buildGoModule, makeWrapper, nix, nixFlakes, runCommand }:
+{ lib, fetchFromGitHub, buildGoModule, makeWrapper, nix, runCommand }:
 let
   unwrapped = buildGoModule rec {
     pname = "nix-build-uncached";
@@ -28,10 +28,5 @@ in
     mkdir -p $out/bin
     makeWrapper ${unwrapped}/bin/nix-build-uncached $out/bin/nix-build-uncached \
       --prefix PATH ":" ${lib.makeBinPath [ nix ]}
-  '';
-  nix-build-uncached-flakes = runCommand "nix-build-uncached-flakes" { nativeBuildInputs = [ makeWrapper ]; } ''
-    mkdir -p $out/bin
-    makeWrapper ${unwrapped}/bin/nix-build-uncached $out/bin/nix-build-uncached \
-      --prefix PATH ":" ${lib.makeBinPath [ nixFlakes ]}
   '';
 }
