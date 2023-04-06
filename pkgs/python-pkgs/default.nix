@@ -1,7 +1,4 @@
-{ keystone, callPackage }:
-let
-  keystone-native = keystone;
-in
+{ callPackage }:
 rec {
   chump = callPackage ./chump.nix { };
 
@@ -10,10 +7,6 @@ rec {
   };
 
   gatt = callPackage ./gatt.nix { };
-
-  keystone = callPackage ./keystone.nix {
-    keystone = keystone-native;
-  };
 
   ldap0 = callPackage ./ldap0.nix { };
 
