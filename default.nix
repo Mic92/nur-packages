@@ -16,6 +16,8 @@ rec {
 
   eapol_test = pkgs.callPackage ./pkgs/eapol_test { };
 
+  edge-gpt = pkgs.callPackage ./pkgs/edge-gpt { };
+
   fira-code-pro-nerdfonts = pkgs.nerdfonts.override {
     fonts = [ "FiraCode" ];
   };
