@@ -12,8 +12,6 @@ rec {
 
   clearsans = pkgs.callPackage ./pkgs/clearsans { };
 
-  drone-runner-ssh = pkgs.callPackage ./pkgs/drone-runner-ssh { };
-
   eapol_test = pkgs.callPackage ./pkgs/eapol_test { };
 
   edge-gpt = pkgs.callPackage ./pkgs/edge-gpt { };
