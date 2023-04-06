@@ -3,9 +3,6 @@
 rec {
   vaultwarden_ldap = pkgs.callPackage ./pkgs/vaultwarden_ldap { };
 
-  # TODO checksum can break ... make a mirror?
-  # binary-ninja = pkgs.callPackage ./pkgs/binary-ninja {};
-
   cntr = pkgs.callPackage ./pkgs/cntr { };
 
   conky-symbols = pkgs.callPackage ./pkgs/conky-symbols { };
