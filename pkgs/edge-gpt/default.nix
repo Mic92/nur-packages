@@ -27,24 +27,6 @@ python3.pkgs.buildPythonApplication rec {
     (callPackage ./bing-image-creator { })
   ];
 
-  postInstall = ''
-    mkdir -p $out/bin
-
-    cat > $out/bin/edge-gpt <<EOF
-    #!${runtimeShell}
-    export PYTHONPATH=$out/${python3.sitePackages}:$PYTHONPATH
-    exec ${python3.interpreter} -m EdgeGPT "\$@"
-    EOF
-
-    cat > $out/bin/edge-image-gen <<EOF
-    #!${runtimeShell}
-    export PYTHONPATH=$out/${python3.sitePackages}:$PYTHONPATH
-    exec ${python3.interpreter} -m ImageGen "\$@"
-    EOF
-
-    chmod +x $out/bin/{edge-gpt,edge-image-gen}
-  '';
-
   pythonImportsCheck = [
     "EdgeGPT"
     "ImageGen"
