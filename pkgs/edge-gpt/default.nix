@@ -1,7 +1,7 @@
 { lib
 , python3
 , fetchFromGitHub
-, runtimeShell
+, fetchpatch
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -15,6 +15,13 @@ python3.pkgs.buildPythonApplication rec {
     rev = version;
     hash = "sha256-MdVV7S5T8Alo9u0+k5PV22M98EM09rBcJKsBioc/QAI=";
   };
+
+  patches = [
+    (fetchpatch {
+      url = "https://github.com/acheong08/EdgeGPT/commit/3fd920b878f9a09419aa4805c2a472bd48141116.patch";
+      sha256 = "sha256-LtgfA9Z739kV5lbpvH0Xo8iMSZ94g21AuyN9Yea2/0M=";
+    })
+  ];
 
   propagatedBuildInputs = with python3.pkgs; [
     requests
@@ -36,6 +43,5 @@ python3.pkgs.buildPythonApplication rec {
     description = "Reverse engineered API of Microsoft's Bing Chat AI";
     homepage = "https://github.com/acheong08/EdgeGPT";
     license = licenses.unlicense;
-    maintainers = with maintainers; [ ];
   };
 }
