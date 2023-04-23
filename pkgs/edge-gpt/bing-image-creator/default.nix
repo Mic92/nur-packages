@@ -3,7 +3,7 @@
 , fetchFromGitHub
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonPackage rec {
   pname = "bing-image-creator";
   version = "0.1.3";
   format = "setuptools";
