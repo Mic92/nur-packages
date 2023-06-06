@@ -6,19 +6,20 @@
 
 python3.pkgs.buildPythonPackage rec {
   pname = "edge-gpt";
-  version = "0.7.1";
+  version = "0.10.0";
   format = "setuptools";
 
   src = fetchFromGitHub {
     owner = "acheong08";
     repo = "EdgeGPT";
     rev = version;
-    hash = "sha256-W8I9VwABXRgqAoF4y6svV0gLxuP1yN9GoASyOTbocrM=";
+    hash = "sha256-ss6+CM2HjLJA76pXlSu8FRH4HfH0NA6zBWCMVhUpKLU=";
   };
 
   postPatch = ''
     # we don't need the socks feature
-    sed -i -e 's/httpx.*>=[^"]+/httpx/g' setup.py
+    # "httpx[socks]>=0.24.0",
+    sed -i -e 's/httpx.*/httpx",/' setup.py
   '';
 
   propagatedBuildInputs = with python3.pkgs; [
@@ -35,7 +36,7 @@ python3.pkgs.buildPythonPackage rec {
 
   pythonImportsCheck = [
     "EdgeGPT"
-    "ImageGen"
+    "EdgeGPT.ImageGen"
   ];
 
   meta = with lib; {
