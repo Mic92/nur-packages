@@ -2,7 +2,6 @@
 , python3
 , fetchFromGitHub
 , bing-image-creator
-, fetchpatch
 }:
 
 python3.pkgs.buildPythonPackage rec {
