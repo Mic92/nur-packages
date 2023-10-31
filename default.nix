@@ -32,8 +32,6 @@ rec {
 
   ircsink = pkgs.callPackage ./pkgs/ircsink { };
 
-  kvmtool = pkgs.callPackage ./pkgs/kvmtool { };
-
   lualdap = pkgs.callPackage ./pkgs/lualdap { };
 
   mastodon-hnbot = pkgs.python3Packages.callPackage ./pkgs/mastodon-hnbot {};
@@ -57,10 +55,6 @@ rec {
   );
 
   rspamd-learn-spam-ham = pkgs.python3.pkgs.callPackage ./pkgs/rspam-learn-spam-ham { };
-
-  signald = pkgs.callPackage ./pkgs/signald { };
-
-  weechat-signal = pkgs.callPackage ./pkgs/weechat-signal { };
 
   inherit (pkgs.callPackages ./pkgs/node-packages { }) speedscope reveal-md renovate;
 
