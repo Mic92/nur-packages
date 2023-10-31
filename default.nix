@@ -7,8 +7,6 @@ rec {
 
   conky-symbols = pkgs.callPackage ./pkgs/conky-symbols { };
 
-  clearsans = pkgs.callPackage ./pkgs/clearsans { };
-
   eapol_test = pkgs.callPackage ./pkgs/eapol_test { };
 
   bing-image-creator = pkgs.callPackage ./pkgs/bing-image-creator { };
