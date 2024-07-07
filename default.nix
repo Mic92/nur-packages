@@ -18,8 +18,6 @@ rec {
     fonts = [ "FiraCode" ];
   };
 
-  gatttool = pkgs.callPackage ./pkgs/gatttool { };
-
   gdb-dashboard = pkgs.callPackage ./pkgs/gdb-dashboard { };
 
   goatcounter = pkgs.callPackage ./pkgs/goatcounter { };
