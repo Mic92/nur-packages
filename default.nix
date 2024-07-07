@@ -52,7 +52,7 @@ rec {
 
   rspamd-learn-spam-ham = pkgs.python3.pkgs.callPackage ./pkgs/rspam-learn-spam-ham { };
 
-  inherit (pkgs.callPackages ./pkgs/node-packages { }) speedscope reveal-md renovate;
+  inherit (pkgs.callPackages ./pkgs/node-packages { }) speedscope reveal-md;
 
   source-code-pro-nerdfonts = pkgs.nerdfonts.override {
     fonts = [ "SourceCodePro" ];
