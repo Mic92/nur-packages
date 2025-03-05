@@ -14,10 +14,6 @@ rec {
     inherit bing-image-creator;
   };
 
-  fira-code-pro-nerdfonts = pkgs.nerdfonts.override {
-    fonts = [ "FiraCode" ];
-  };
-
   gdb-dashboard = pkgs.callPackage ./pkgs/gdb-dashboard { };
 
   goatcounter = pkgs.callPackage ./pkgs/goatcounter { };
@@ -51,10 +47,6 @@ rec {
   rspamd-learn-spam-ham = pkgs.python3.pkgs.callPackage ./pkgs/rspam-learn-spam-ham { };
 
   inherit (pkgs.callPackages ./pkgs/node-packages { }) speedscope reveal-md;
-
-  source-code-pro-nerdfonts = pkgs.nerdfonts.override {
-    fonts = [ "SourceCodePro" ];
-  };
 
   #peerix = pkgs.python3.pkgs.callPackage ./pkgs/peerix { };
 
