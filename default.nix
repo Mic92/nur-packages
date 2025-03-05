@@ -28,8 +28,6 @@ rec {
     inherit (pkgs) libarchive;
   };
 
-  peep = pkgs.callPackage ./pkgs/peep { };
-
   perlPackages = {
     Pry = pkgs.callPackage ./pkgs/pry { };
   };
