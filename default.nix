@@ -3,8 +3,6 @@
 rec {
   vaultwarden_ldap = pkgs.callPackage ./pkgs/vaultwarden_ldap { };
 
-  cntr = pkgs.callPackage ./pkgs/cntr { };
-
   conky-symbols = pkgs.callPackage ./pkgs/conky-symbols { };
 
   eapol_test = pkgs.callPackage ./pkgs/eapol_test { };
