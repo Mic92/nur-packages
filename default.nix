@@ -24,10 +24,6 @@ rec {
 
   pandoc-bin = pkgs.callPackage ./pkgs/pandoc { };
 
-  patool = pkgs.python3.pkgs.callPackage ./pkgs/patool {
-    inherit (pkgs) libarchive;
-  };
-
   perlPackages = {
     Pry = pkgs.callPackage ./pkgs/pry { };
   };
