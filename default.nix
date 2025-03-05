@@ -7,10 +7,6 @@ rec {
 
   eapol_test = pkgs.callPackage ./pkgs/eapol_test { };
 
-  bing-image-creator = pkgs.callPackage ./pkgs/bing-image-creator { };
-  edge-gpt = pkgs.callPackage ./pkgs/edge-gpt {
-    inherit bing-image-creator;
-  };
 
   gdb-dashboard = pkgs.callPackage ./pkgs/gdb-dashboard { };
 
