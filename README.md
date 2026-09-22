@@ -2,10 +2,7 @@
 
 > [!WARNING]
 > **Deprecated.** This repository is no longer maintained and has been removed
-> from [NUR](https://github.com/nix-community/NUR). The packages that were still
-> in use (`goatcounter`, `mastodon-hnbot`, `vaultwarden_ldap`) moved to
-> [Mic92/dotfiles](https://github.com/Mic92/dotfiles/tree/main/pkgs). The rest
-> is unused; copy what you need from the git history.
+> from [NUR](https://github.com/nix-community/NUR).
 
 ![Build Status](https://github.com/Mic92/nur-packages/workflows/Build%20and%20populate%20cache/badge.svg)
 [![Cachix Cache](https://img.shields.io/badge/cachix-mic92-blue.svg)](https://mic92.cachix.org)
